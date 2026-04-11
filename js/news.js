@@ -19,7 +19,8 @@ async function renderNews() {
   container.innerHTML = '<p class="news-empty">載入中…</p>';
 
   try {
-    const res  = await fetch(API);
+    const res = await fetch(API);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const news = await res.json();
 
     if (!Array.isArray(news) || news.length === 0) {
