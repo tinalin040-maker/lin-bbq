@@ -3,7 +3,7 @@
 
 const ADMIN_PASSWORD = '0986';
 const GIST_ID        = process.env.GIST_ID;
-const GITHUB_TOKEN   = process.env.GITHUB_TOKEN;
+const GITHUB_TOKEN   = process.env.LIN_GH_TOKEN;
 const GIST_FILE      = 'news-data.json';
 const GIST_API       = `https://api.github.com/gists/${GIST_ID}`;
 
