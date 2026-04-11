@@ -17,7 +17,12 @@ export default async (request) => {
     return new Response(null, { status: 204, headers: corsHeaders });
   }
 
-  const store = getStore('lin-bbq-news');
+  const store = getStore({
+    name: 'lin-bbq-news',
+    consistency: 'strong',
+    siteID: process.env.NETLIFY_SITE_ID,
+    token: process.env.NETLIFY_TOKEN,
+  });
 
   try {
     // GET — 讀取所有消息
