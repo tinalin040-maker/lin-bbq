@@ -20,8 +20,8 @@ export default async (request) => {
   const store = getStore({
     name: 'lin-bbq-news',
     consistency: 'strong',
-    siteID: process.env.NETLIFY_SITE_ID,
-    token: process.env.NETLIFY_TOKEN,
+    siteID: '0760d5ac-cca8-46d9-bb23-d3f9584be228',
+    token: process.env.LIN_NETLIFY_TOKEN,
   });
 
   try {
