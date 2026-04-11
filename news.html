@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>最新消息 | 林燒烤</title>
+  <meta name="description" content="林燒烤最新消息、活動公告、優惠資訊，台中沙鹿靜宜總店與清水店動態更新。" />
+  <meta name="keywords" content="林燒烤最新消息,台中燒烤優惠,沙鹿燒烤活動,清水燒烤公告" />
+  <meta name="robots" content="index, follow" />
+  <!-- GEO -->
+  <meta name="geo.region" content="TW-TXG" />
+  <meta name="geo.placename" content="台中市沙鹿區・清水區" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="最新消息 | 林燒烤" />
+  <meta property="og:description" content="林燒烤最新消息、活動公告、優惠資訊，台中沙鹿靜宜總店與清水店動態更新。" />
+  <meta property="og:image" content="./照片/檯面食材照片.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="zh_TW" />
+  <meta property="og:url" content="https://www.linbbq.com/news.html" />
+  <link rel="canonical" href="https://www.linbbq.com/news.html" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="container">
+      <a class="nav-logo" href="index.html">林燒烤 <span>LIN BBQ</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">首頁</a></li>
+        <li><a href="news.html">最新消息</a></li>
+        <li><a href="menu.html">菜單</a></li>
+        <li><a href="branches.html">分店資訊</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="選單">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html">首頁</a>
+    <a href="news.html">最新消息</a>
+    <a href="menu.html">菜單</a>
+    <a href="branches.html">分店資訊</a>
+  </div>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>最新 <span style="color:var(--primary)">消息</span></h1>
+      <p>林燒烤最新動態・活動公告・優惠資訊</p>
+    </div>
+  </section>
+
+  <!-- ===== NEWS LIST ===== -->
+  <section class="news-section">
+    <div class="container" style="max-width:800px">
+      <div class="news-list" id="newsList">
+        <!-- Rendered by news.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ADMIN TRIGGER (fixed bottom-right) ===== -->
+  <button id="newsAdminTrigger" title="管理員登入" style="
+    position:fixed;bottom:24px;right:24px;
+    width:30px;height:30px;border-radius:50%;border:none;
+    background:rgba(80,80,80,.35);color:rgba(255,255,255,.35);
+    font-size:11px;cursor:pointer;z-index:200;
+    transition:background .2s,color .2s;line-height:1;
+  " onmouseover="this.style.background='rgba(100,100,100,.6)';this.style.color='rgba(255,255,255,.7)'"
+     onmouseout="this.style.background='rgba(80,80,80,.35)';this.style.color='rgba(255,255,255,.35)'">管</button>
+
+  <!-- ===== ADMIN OVERLAY ===== -->
+  <div id="newsAdminOverlay" style="
+    display:none;position:fixed;inset:0;
+    background:rgba(0,0,0,.6);z-index:500;
+    align-items:center;justify-content:center;
+  ">
+    <div style="
+      background:var(--bg-card);border:1px solid var(--border);
+      border-radius:var(--radius);padding:32px;
+      max-width:460px;width:90%;position:relative;
+      max-height:90vh;overflow-y:auto;
+    ">
+      <button id="newsAdminClose" style="
+        position:absolute;top:12px;right:14px;
+        background:none;border:none;color:var(--text-muted);
+        font-size:1.2rem;cursor:pointer;
+      ">✕</button>
+
+      <!-- Login Box -->
+      <div id="adminLoginBox">
+        <h3 style="margin-bottom:8px;">🔒 管理員登入</h3>
+        <p style="color:var(--text-muted);font-size:.9rem;margin-bottom:16px;">請輸入密碼以管理最新消息</p>
+        <form id="loginForm">
+          <div class="admin-input-row">
+            <input type="password" id="pwInput" class="admin-input" placeholder="請輸入密碼" autocomplete="current-password" />
+            <button type="submit" class="btn btn-primary">登入</button>
+          </div>
+          <p class="admin-error" id="loginError">密碼錯誤，請重試。</p>
+        </form>
+      </div>
+
+      <!-- Admin Panel -->
+      <div class="admin-panel" id="adminPanel">
+        <h3 style="margin-bottom:16px;">📝 新增消息</h3>
+        <form class="admin-form" id="addNewsForm">
+          <label for="newsTitle">消息標題</label>
+          <input type="text" id="newsTitle" placeholder="例：本週特惠活動" required maxlength="80" />
+          <label for="newsContent">消息內容</label>
+          <textarea id="newsContent" placeholder="請輸入消息內容..." required maxlength="600"></textarea>
+          <button type="submit" class="btn btn-primary">發布消息</button>
+        </form>
+        <button class="btn btn-danger admin-logout" id="logoutBtn" style="margin-top:12px;">登出管理員</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      var trigger = document.getElementById('newsAdminTrigger');
+      var overlay = document.getElementById('newsAdminOverlay');
+      var closeBtn = document.getElementById('newsAdminClose');
+      trigger.addEventListener('click', function(){ overlay.style.display='flex'; });
+      closeBtn.addEventListener('click', function(){ overlay.style.display='none'; });
+      overlay.addEventListener('click', function(e){ if(e.target===overlay) overlay.style.display='none'; });
+    })();
+  </script>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo">林燒烤</div>
+          <p>台中在地燒烤好味道<br>沙鹿靜宜總店・清水店</p>
+          <p class="footer-franchise">加盟專線：<strong>0986-318057</strong></p>
+        </div>
+        <div class="footer-col">
+          <h4>網站導覽</h4>
+          <a href="index.html">首頁</a>
+          <a href="news.html">最新消息</a>
+          <a href="menu.html">菜單</a>
+          <a href="branches.html">分店資訊</a>
+        </div>
+        <div class="footer-col">
+          <h4>聯絡我們</h4>
+          <a href="https://lin.ee/qLsOlUw" target="_blank" rel="noopener">LINE 官方帳號</a>
+          <a href="https://www.facebook.com/LinBBQ" target="_blank" rel="noopener">Facebook 粉絲頁</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 林燒烤 Lin BBQ. All rights reserved.</span>
+        <span>台中市沙鹿區・清水區</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/main.js"></script>
+  <script src="./js/news.js"></script>
+</body>
+</html>
