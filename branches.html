@@ -22,6 +22,79 @@
   <link rel="canonical" href="https://www.linbbq.com/branches.html" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>" />
   <link rel="stylesheet" href="./css/style.css" />
+
+  <!-- LocalBusiness JSON-LD（兩家分店 + 經緯度） -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Restaurant",
+        "@id": "https://www.linbbq.com/#shalu",
+        "name": "林燒烤 沙鹿靜宜總店",
+        "telephone": "+886-980-056879",
+        "priceRange": "$",
+        "servesCuisine": ["燒烤", "串燒"],
+        "url": "https://www.linbbq.com/branches.html",
+        "image": "https://www.linbbq.com/林燒烤沙鹿店.jpg",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "北勢東路567-1號",
+          "addressLocality": "沙鹿區",
+          "addressRegion": "台中市",
+          "postalCode": "433",
+          "addressCountry": "TW"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 24.2276371,
+          "longitude": 120.5716699
+        },
+        "hasMap": "https://maps.app.goo.gl/4bhoCurU7PTJ73o19",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "16:30",
+            "closes": "01:00"
+          }
+        ]
+      },
+      {
+        "@type": "Restaurant",
+        "@id": "https://www.linbbq.com/#qingshui",
+        "name": "林燒烤 清水店",
+        "telephone": "+886-909-575558",
+        "priceRange": "$",
+        "servesCuisine": ["燒烤", "串燒"],
+        "url": "https://www.linbbq.com/branches.html",
+        "image": "https://www.linbbq.com/林燒烤清水店.jpg",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "光復街39-1號",
+          "addressLocality": "清水區",
+          "addressRegion": "台中市",
+          "postalCode": "436",
+          "addressCountry": "TW"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 24.2706667,
+          "longitude": 120.5738391
+        },
+        "hasMap": "https://maps.app.goo.gl/TREsCpeziUweDDv18",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "16:00",
+            "closes": "22:00"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -90,7 +163,7 @@
             </div>
             <div class="branch-btns">
               <a
-                href="https://maps.app.goo.gl/XSDqRvGLvVFNaeHt7"
+                href="https://maps.app.goo.gl/4bhoCurU7PTJ73o19"
                 target="_blank"
                 rel="noopener"
                 class="btn btn-primary"
@@ -139,7 +212,7 @@
             </div>
             <div class="branch-btns">
               <a
-                href="https://maps.app.goo.gl/P1yjsqvw2a54qipT9"
+                href="https://maps.app.goo.gl/TREsCpeziUweDDv18"
                 target="_blank"
                 rel="noopener"
                 class="btn btn-primary"

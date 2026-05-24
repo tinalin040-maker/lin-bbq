@@ -6,8 +6,8 @@
   <title>林燒烤 | 台中沙鹿・清水 道地燒烤好味道</title>
 
   <!-- SEO -->
-  <meta name="description" content="林燒烤，台中沙鹿靜宜總店與清水店，精選食材、現烤美味。提供多款串燒、豬肉、雞肉、鴨肉、蔬菜及拼盤，是台中燒烤首選。" />
-  <meta name="keywords" content="林燒烤,台中燒烤,沙鹿燒烤,清水燒烤,台中串燒,沙鹿靜宜,清水夜市,台中美食,燒烤推薦,沙鹿美食" />
+  <meta name="description" content="林燒烤｜沙鹿宵夜首選！台中沙鹿靜宜大學旁總店與清水夜市附近清水店，現點現烤80+款串燒，招牌雞蛋豆腐、蒜酥骰子豬、自製蘋果辣椒醬，學生聚餐、宵夜外送推薦。" />
+  <meta name="keywords" content="林燒烤,沙鹿燒烤,清水燒烤,台中串燒,沙鹿美食,清水夜市附近燒烤,靜宜大學附近美食,沙鹿宵夜推薦,蘋果辣椒醬燒烤,台中學生美食,沙鹿外送烤肉" />
   <meta name="robots" content="index, follow" />
 
   <!-- GEO -->
@@ -35,30 +35,58 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@graph": [
+    "@type": "Restaurant",
+    "@id": "https://www.linbbq.com/#brand",
+    "name": "林燒烤",
+    "alternateName": "Lin BBQ",
+    "url": "https://www.linbbq.com/",
+    "image": "https://www.linbbq.com/照片/檯面食材照片.jpg",
+    "servesCuisine": ["燒烤", "串燒", "台式燒烤"],
+    "priceRange": "$",
+    "sameAs": ["https://www.facebook.com/LinBBQ"],
+    "hasMenu": "https://www.linbbq.com/menu.html",
+    "department": [
       {
         "@type": "Restaurant",
+        "@id": "https://www.linbbq.com/#shalu",
         "name": "林燒烤 沙鹿靜宜總店",
-        "servesCuisine": "燒烤、串燒",
-        "telephone": "0980-056879",
-        "openingHours": "Tu-Su 16:30-01:00",
+        "telephone": "+886-980-056879",
+        "priceRange": "$",
+        "servesCuisine": ["燒烤", "串燒"],
+        "url": "https://www.linbbq.com/branches.html",
+        "image": "https://www.linbbq.com/林燒烤沙鹿店.jpg",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "北勢東路567-1號",
           "addressLocality": "沙鹿區",
           "addressRegion": "台中市",
+          "postalCode": "433",
           "addressCountry": "TW"
         },
-        "hasMap": "https://maps.app.goo.gl/XSDqRvGLvVFNaeHt7",
-        "url": "https://www.linbbq.com/",
-        "sameAs": ["https://www.facebook.com/LinBBQ"]
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 24.2276371,
+          "longitude": 120.5716699
+        },
+        "hasMap": "https://maps.app.goo.gl/4bhoCurU7PTJ73o19",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "16:30",
+            "closes": "01:00"
+          }
+        ]
       },
       {
         "@type": "Restaurant",
+        "@id": "https://www.linbbq.com/#qingshui",
         "name": "林燒烤 清水店",
-        "servesCuisine": "燒烤、串燒",
-        "telephone": "0909-575558",
-        "openingHours": "Mo-Su 16:00-22:00",
+        "telephone": "+886-909-575558",
+        "priceRange": "$",
+        "servesCuisine": ["燒烤", "串燒"],
+        "url": "https://www.linbbq.com/branches.html",
+        "image": "https://www.linbbq.com/林燒烤清水店.jpg",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "光復街39-1號",
@@ -67,8 +95,62 @@
           "postalCode": "436",
           "addressCountry": "TW"
         },
-        "hasMap": "https://maps.app.goo.gl/P1yjsqvw2a54qipT9",
-        "sameAs": ["https://www.facebook.com/LinBBQ"]
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 24.2706667,
+          "longitude": 120.5738391
+        },
+        "hasMap": "https://maps.app.goo.gl/TREsCpeziUweDDv18",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "16:00",
+            "closes": "22:00"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "林燒烤在哪裡？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "林燒烤有兩間門市，總店位於台中市沙鹿區靜宜大學旁（步行可達），清水分店則鄰近清水夜市，交通皆相當便利。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "林燒烤可以外帶或外送嗎？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "可以！我們是沙鹿熱門的外帶串燒與宵夜推薦選擇。歡迎加入 LINE 官方帳號線上點餐預約外帶，避免現場久候。foodpanda 與 Uber Eats 也可搜尋「林燒烤沙鹿靜宜總店」或「林燒烤清水店」進行外送。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "林燒烤有什麼招牌必點？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "必點招牌包括外酥內嫩的雞蛋豆腐（塗上特製燒烤醬、撒上柴魚片）、雞肉串、無骨鹹酥雞、甜不辣、米血；特色餐點有培根皮蛋、香氣濃郁的蒜酥骰子豬，搭配獨家研發、吃辣必加的「蘋果辣椒醬」，是台中少見的特色燒烤。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "林燒烤營業時間是？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "兩間分店的最新營業時間與公休日，皆會同步更新於 LINE 官方帳號，歡迎隨時線上查詢。沙鹿靜宜總店一般營業 16:30 ~ 凌晨 1:00（週一公休），清水店營業 16:00 ~ 22:00。"
+        }
       }
     ]
   }
@@ -154,13 +236,14 @@
           <h2 class="section-title">關於 <span>林燒烤</span></h2>
           <div class="divider"></div>
           <p>
-            林燒烤發跡於台中沙鹿靜宜大學旁，堅持每日嚴選新鮮食材，以獨家醃製配方與自製獨門燒烤醬，
-            呈現最道地的台式燒烤風味。無論是鮮嫩雞肉串、香脆雞皮，還是清爽蔬菜串，
-            每一串都是用心的成果。
+            林燒烤發跡於<strong>台中沙鹿靜宜大學</strong>旁，是無數靜宜學生與在地老饕記憶中的<strong>沙鹿宵夜推薦</strong>。
+            從一支炭火雞肉串開始，我們堅持每日嚴選新鮮食材、獨家醃製配方與自製燒烤醬，
+            搭配獨門研發的<strong>蘋果辣椒醬</strong>，將酸甜與辛辣完美融合，是台中少見的特色<strong>沙鹿燒烤</strong>風味。
           </p>
           <p>
-            我們在沙鹿靜宜總店與清水店服務台中市民多年，以平實價格、豐富選擇、
-            親切服務贏得無數回頭客的肯定，是家人聚餐、朋友相聚的最佳選擇。
+            隨著口碑擴展，我們在<strong>清水夜市附近</strong>開設<strong>清水燒烤</strong>分店，繼續以平實價格、
+            豐富選擇與親切服務，提供高 CP 值的<strong>台中學生美食</strong>與<strong>沙鹿外送烤肉</strong>。
+            無論是課後聚餐、深夜小酌或外送宵夜，林燒烤都是您信賴的<strong>台中串燒</strong>與<strong>沙鹿美食</strong>首選。
           </p>
 
           <div class="about-features">
@@ -202,31 +285,31 @@
 
       <div class="gallery-grid reveal">
         <div class="gallery-item">
-          <img src="./照片/檯面食材照片.jpg" alt="林燒烤豐富食材" loading="lazy" />
+          <img src="./照片/檯面食材照片.jpg" alt="台中沙鹿林燒烤檯面豐富食材展示｜靜宜大學旁宵夜推薦" loading="lazy" />
           <div class="gallery-overlay"></div>
         </div>
         <div class="gallery-item">
-          <img src="./照片/雞蛋豆腐(有煙)亮.jpg" alt="招牌雞蛋豆腐" loading="lazy" />
+          <img src="./照片/雞蛋豆腐(有煙)亮.jpg" alt="沙鹿林燒烤招牌雞蛋豆腐｜外酥內嫩柴魚片燒烤" loading="lazy" />
           <div class="gallery-overlay"></div>
         </div>
         <div class="gallery-item">
-          <img src="./照片/蘋果辣椒2021-1.jpg" alt="招牌蘋果辣椒" loading="lazy" />
+          <img src="./照片/蘋果辣椒2021-1.jpg" alt="林燒烤獨家自製蘋果辣椒醬｜台中沙鹿特色燒烤醬料" loading="lazy" />
           <div class="gallery-overlay"></div>
         </div>
         <div class="gallery-item">
-          <img src="./照片/蘋果辣椒串-去LOGO.jpg" alt="蘋果辣椒串" loading="lazy" />
+          <img src="./照片/蘋果辣椒串-去LOGO.jpg" alt="台中清水林燒烤蘋果辣椒串｜獨家特色燒烤" loading="lazy" />
           <div class="gallery-overlay"></div>
         </div>
         <div class="gallery-item">
-          <img src="./照片/甜不辣.png" alt="招牌甜不辣" loading="lazy" />
+          <img src="./照片/甜不辣.png" alt="沙鹿林燒烤招牌甜不辣｜靜宜大學學生美食" loading="lazy" />
           <div class="gallery-overlay"></div>
         </div>
         <div class="gallery-item">
-          <img src="./照片/櫃台照片.jpg" alt="林燒烤櫃台" loading="lazy" />
+          <img src="./照片/櫃台照片.jpg" alt="台中沙鹿林燒烤靜宜總店櫃台｜現點現烤串燒" loading="lazy" />
           <div class="gallery-overlay"></div>
         </div>
         <div class="gallery-item">
-          <img src="./照片/串燒.jpg" alt="現烤串燒" loading="lazy" />
+          <img src="./照片/串燒.jpg" alt="林燒烤現烤雞肉串燒｜台中沙鹿宵夜外送推薦" loading="lazy" />
           <div class="gallery-overlay"></div>
         </div>
         <div class="gallery-item">
@@ -237,6 +320,34 @@
           <img src="./照片/燒烤啤酒.jpg" alt="燒烤配啤酒" loading="lazy" />
           <div class="gallery-overlay"></div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="faq-section" id="faq" style="padding:70px 0;background:var(--bg-dark);">
+    <div class="container">
+      <h2 class="section-title reveal">常見 <span>問題</span></h2>
+      <div class="divider reveal"></div>
+      <p class="section-sub reveal">關於林燒烤，您可能想知道的事</p>
+
+      <div class="faq-list reveal" style="max-width:820px;margin:30px auto 0;display:flex;flex-direction:column;gap:14px;">
+        <details style="background:var(--bg-card);border:1px solid var(--border);border-left:3px solid var(--primary);border-radius:8px;padding:16px 20px;">
+          <summary style="cursor:pointer;font-weight:700;font-size:1.05rem;color:var(--text);">Q：林燒烤在哪裡？</summary>
+          <p style="margin-top:12px;color:var(--text-muted);line-height:1.8;">林燒烤有兩間門市，總店位於台中市沙鹿區靜宜大學旁（步行可達），清水分店則鄰近清水夜市，交通皆相當便利。</p>
+        </details>
+        <details style="background:var(--bg-card);border:1px solid var(--border);border-left:3px solid var(--primary);border-radius:8px;padding:16px 20px;">
+          <summary style="cursor:pointer;font-weight:700;font-size:1.05rem;color:var(--text);">Q：林燒烤可以外帶或外送嗎？</summary>
+          <p style="margin-top:12px;color:var(--text-muted);line-height:1.8;">可以！我們是沙鹿熱門的外帶串燒與宵夜推薦選擇。歡迎加入 LINE 官方帳號線上點餐預約外帶，避免現場久候。foodpanda 與 Uber Eats 也可搜尋「林燒烤沙鹿靜宜總店」或「林燒烤清水店」進行外送。</p>
+        </details>
+        <details style="background:var(--bg-card);border:1px solid var(--border);border-left:3px solid var(--primary);border-radius:8px;padding:16px 20px;">
+          <summary style="cursor:pointer;font-weight:700;font-size:1.05rem;color:var(--text);">Q：林燒烤有什麼招牌必點？</summary>
+          <p style="margin-top:12px;color:var(--text-muted);line-height:1.8;">必點招牌包括外酥內嫩的<strong>雞蛋豆腐</strong>（塗上特製燒烤醬、撒上柴魚片）、雞肉串、無骨鹹酥雞、甜不辣、米血；特色餐點有培根皮蛋、香氣濃郁的<strong>蒜酥骰子豬</strong>，搭配獨家研發、吃辣必加的「<strong>蘋果辣椒醬</strong>」，是台中少見的特色燒烤。</p>
+        </details>
+        <details style="background:var(--bg-card);border:1px solid var(--border);border-left:3px solid var(--primary);border-radius:8px;padding:16px 20px;">
+          <summary style="cursor:pointer;font-weight:700;font-size:1.05rem;color:var(--text);">Q：林燒烤營業時間是？</summary>
+          <p style="margin-top:12px;color:var(--text-muted);line-height:1.8;">兩間分店的最新營業時間與公休日，皆會同步更新於 LINE 官方帳號，歡迎隨時線上查詢。沙鹿靜宜總店一般營業 16:30 ~ 凌晨 1:00（週一公休），清水店營業 16:00 ~ 22:00。</p>
+        </details>
       </div>
     </div>
   </section>
