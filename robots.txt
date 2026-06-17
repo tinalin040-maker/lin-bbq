@@ -2,3 +2,7 @@ User-agent: *
 Allow: /
 
 Sitemap: https://www.linbbq.com/sitemap.xml
+
+# AI 友善：提供給大型語言模型擷取的純文字摘要
+# https://www.linbbq.com/llms.txt
+# https://www.linbbq.com/llms-full.txt

@@ -24,6 +24,8 @@
   <meta property="og:locale" content="zh_TW" />
   <meta property="og:url" content="https://www.linbbq.com/" />
   <link rel="canonical" href="https://www.linbbq.com/" />
+  <link rel="alternate" type="text/plain" title="LLM-friendly summary" href="https://www.linbbq.com/llms.txt" />
+  <link rel="alternate" type="text/plain" title="LLM-friendly full menu" href="https://www.linbbq.com/llms-full.txt" />
 
   <!-- Favicon placeholder -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>" />
@@ -40,7 +42,14 @@
     "name": "林燒烤",
     "alternateName": "Lin BBQ",
     "url": "https://www.linbbq.com/",
-    "image": "https://www.linbbq.com/照片/檯面食材照片.jpg",
+    "logo": "https://www.linbbq.com/照片/檯面食材照片.jpg",
+    "image": [
+      "https://www.linbbq.com/照片/檯面食材照片.jpg",
+      "https://www.linbbq.com/林燒烤沙鹿店.jpg",
+      "https://www.linbbq.com/林燒烤清水店.jpg",
+      "https://www.linbbq.com/照片/雞蛋豆腐(有煙)亮.jpg",
+      "https://www.linbbq.com/照片/蘋果辣椒2021-1.jpg"
+    ],
     "telephone": "+886-980-056879",
     "address": {
       "@type": "PostalAddress",
@@ -52,7 +61,13 @@
     },
     "servesCuisine": ["燒烤", "串燒", "台式燒烤"],
     "priceRange": "$",
-    "sameAs": ["https://www.facebook.com/LinBBQ"],
+    "currenciesAccepted": "TWD",
+    "paymentAccepted": ["Cash", "LINE Pay"],
+    "acceptsReservations": "False",
+    "sameAs": [
+      "https://www.facebook.com/LinBBQ",
+      "https://lin.ee/qLsOlUw"
+    ],
     "hasMenu": "https://www.linbbq.com/menu.html",
     "department": [
       {
@@ -62,6 +77,10 @@
         "telephone": "+886-980-056879",
         "priceRange": "$",
         "servesCuisine": ["燒烤", "串燒"],
+        "currenciesAccepted": "TWD",
+        "paymentAccepted": ["Cash", "LINE Pay"],
+        "acceptsReservations": "False",
+        "hasMenu": "https://www.linbbq.com/menu.html",
         "url": "https://www.linbbq.com/branches.html",
         "image": "https://www.linbbq.com/林燒烤沙鹿店.jpg",
         "address": {
@@ -94,6 +113,10 @@
         "telephone": "+886-909-575558",
         "priceRange": "$",
         "servesCuisine": ["燒烤", "串燒"],
+        "currenciesAccepted": "TWD",
+        "paymentAccepted": ["Cash", "LINE Pay"],
+        "acceptsReservations": "False",
+        "hasMenu": "https://www.linbbq.com/menu.html",
         "url": "https://www.linbbq.com/branches.html",
         "image": "https://www.linbbq.com/林燒烤清水店.jpg",
         "address": {
@@ -118,6 +141,22 @@
             "closes": "22:00"
           }
         ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "首頁",
+        "item": "https://www.linbbq.com/"
       }
     ]
   }
