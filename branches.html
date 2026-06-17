@@ -128,7 +128,8 @@
 </head>
 <body>
 
-  <!-- ===== NAVBAR ===== -->
+  <!-- ===== HEADER + NAVBAR ===== -->
+  <header class="site-header">
   <nav class="navbar">
     <div class="container">
       <a class="nav-logo" href="index.html">林燒烤 <span>LIN BBQ</span></a>
@@ -149,6 +150,9 @@
     <a href="menu.html">菜單</a>
     <a href="branches.html">分店資訊</a>
   </div>
+  </header>
+
+  <main>
 
   <!-- ===== PAGE HERO ===== -->
   <section class="page-hero">
@@ -164,7 +168,7 @@
       <div class="branches-grid">
 
         <!-- 沙鹿靜宜總店 -->
-        <div class="branch-card reveal">
+        <article class="branch-card reveal">
           <img class="branch-img" src="./林燒烤沙鹿店.jpg" alt="台中沙鹿平價串燒推薦-林燒烤沙鹿靜宜總店" loading="lazy" />
           <div class="branch-body">
             <span class="branch-tag">總店</span>
@@ -176,17 +180,17 @@
               <div class="branch-info-row">
                 <span class="icon">📍</span>
                 <span class="label">地址</span>
-                <span class="val">台中市沙鹿區北勢東路567-1號</span>
+                <address class="val" style="font-style:normal;display:inline;">台中市沙鹿區北勢東路567-1號</address>
               </div>
               <div class="branch-info-row">
                 <span class="icon">📞</span>
                 <span class="label">電話</span>
-                <span class="val">0980-056879</span>
+                <span class="val"><a href="tel:+886980056879" style="color:inherit;text-decoration:none;">0980-056879</a></span>
               </div>
               <div class="branch-info-row">
                 <span class="icon">🕐</span>
                 <span class="label">營業</span>
-                <span class="val">16:30 ~ 凌晨1點，周一公休</span>
+                <span class="val"><time itemprop="openingHours" datetime="Tu-Su 16:30-25:00">16:30 ~ 凌晨1點，周一公休</time></span>
               </div>
               <div class="branch-info-row">
                 <span class="icon">🛵</span>
@@ -224,10 +228,10 @@
               </iframe>
             </div>
           </div>
-        </div>
+        </article>
 
         <!-- 清水店 -->
-        <div class="branch-card reveal">
+        <article class="branch-card reveal">
           <img class="branch-img" src="./林燒烤清水店.jpg" alt="台中清水平價串燒宵夜首選-林燒烤清水店" loading="lazy" />
           <div class="branch-body">
             <span class="branch-tag" style="background:var(--accent)">分店</span>
@@ -239,17 +243,17 @@
               <div class="branch-info-row">
                 <span class="icon">📍</span>
                 <span class="label">地址</span>
-                <span class="val">436 台中市清水區光復街39-1號</span>
+                <address class="val" style="font-style:normal;display:inline;">436 台中市清水區光復街39-1號</address>
               </div>
               <div class="branch-info-row">
                 <span class="icon">📞</span>
                 <span class="label">電話</span>
-                <span class="val">0909-575558</span>
+                <span class="val"><a href="tel:+886909575558" style="color:inherit;text-decoration:none;">0909-575558</a></span>
               </div>
               <div class="branch-info-row">
                 <span class="icon">🕐</span>
                 <span class="label">營業</span>
-                <span class="val">16:00 ~ 22:00</span>
+                <span class="val"><time itemprop="openingHours" datetime="Mo-Su 16:00-22:00">16:00 ~ 22:00</time></span>
               </div>
               <div class="branch-info-row">
                 <span class="icon">🛵</span>
@@ -279,7 +283,7 @@
               </iframe>
             </div>
           </div>
-        </div>
+        </article>
 
       </div>
 
@@ -293,6 +297,8 @@
 
     </div>
   </section>
+
+  </main>
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
@@ -315,6 +321,7 @@
           <a href="https://lin.ee/qLsOlUw" target="_blank" rel="noopener">LINE 官方帳號</a>
           <a href="https://www.facebook.com/LinBBQ" target="_blank" rel="noopener">Facebook 粉絲頁</a>
           <a href="branches.html">門市地址</a>
+          <a href="ai.html">給 AI 助理</a>
         </div>
       </div>
       <div class="footer-bottom">

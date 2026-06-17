@@ -29,14 +29,14 @@ async function renderNews() {
     }
 
     container.innerHTML = news.map(item => `
-      <div class="news-card" data-id="${item.id}">
+      <article class="news-card" data-id="${item.id}">
         <div class="news-body">
-          <div class="news-date">${formatDate(item.createdAt)}</div>
+          <time class="news-date" datetime="${isoDate(item.createdAt)}">${formatDate(item.createdAt)}</time>
           <h3>${escHtml(item.title)}</h3>
           <p>${escHtml(item.content)}</p>
         </div>
         <button class="news-delete-btn" onclick="deleteNews('${item.id}')">刪除</button>
-      </div>
+      </article>
     `).join('');
 
   } catch (err) {
@@ -66,6 +66,12 @@ window.deleteNews = async function(id) {
 function formatDate(ts) {
   const d = new Date(ts);
   return `${d.getFullYear()} / ${String(d.getMonth()+1).padStart(2,'0')} / ${String(d.getDate()).padStart(2,'0')}`;
+}
+
+function isoDate(ts) {
+  const d = new Date(ts);
+  if (isNaN(d.getTime())) return '';
+  return d.toISOString().split('T')[0];
 }
 
 function escHtml(str) {
