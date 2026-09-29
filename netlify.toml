@@ -3,3 +3,24 @@
 
 [functions]
   directory = "netlify/functions"
+
+# 統一使用 .html 網址，避免 /menu 與 /menu.html 重複
+[[redirects]]
+  from = "/menu"
+  to = "/menu.html"
+  status = 301
+
+[[redirects]]
+  from = "/branches"
+  to = "/branches.html"
+  status = 301
+
+[[redirects]]
+  from = "/news"
+  to = "/news.html"
+  status = 301
+
+[[redirects]]
+  from = "/ai"
+  to = "/ai.html"
+  status = 301
