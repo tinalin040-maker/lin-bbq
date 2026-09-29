@@ -9,18 +9,22 @@
   from = "/menu"
   to = "/menu.html"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/branches"
   to = "/branches.html"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/news"
   to = "/news.html"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/ai"
   to = "/ai.html"
   status = 301
+  force = true
